@@ -396,8 +396,10 @@ Clients MUST NOT derive the contents of a Client ID Metadata Document from
 untrusted external input. This includes input embedded in path or query
 components of a Client Identifier URL, as well as request headers, cookies, or
 information about the requesting user or authorization server. In particular,
-untrusted external input MUST NOT influence security-sensitive or user-visible
-metadata such as `redirect_uris`, `jwks`, `jwks_uri`, `client_name`, `logo_uri`,
+untrusted external input MUST NOT influence URIs used for protocol operation
+(Functional URIs), URIs providing information about the client (Informative
+URIs), or other security-sensitive or user-visible metadata such as
+`redirect_uris`, `jwks`, `jwks_uri`, `client_name`, `client_uri`, `logo_uri`,
 `policy_uri`, or `tos_uri`.
 
 This requirement does not prevent an operator from intentionally updating a
